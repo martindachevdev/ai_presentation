@@ -1,0 +1,31 @@
+---
+description: Improve speaker notes clarity, flow, and factual reliability
+alwaysApply: true
+---
+
+# Presentation Speaker Notes Quality
+
+Applies to all speaker-note edits in this presentation repository.
+
+## Notes style and delivery
+- Write notes for spoken delivery, not for documentation reading.
+- Keep sentences natural and rhythmic, with clear transitions to the next idea.
+- Expand the meaning of slide bullets instead of repeating them verbatim.
+- Include lightweight pacing cues when useful (for example: pause, emphasize, transition).
+- Keep language confident and practical; avoid filler and overlong paragraphs.
+
+## Tool mention reliability (very strict)
+- Any tool feature mentioned in notes must be verified before being stated as fact.
+- Acceptable verification sources:
+  - official vendor documentation,
+  - repository/project docs,
+  - explicit material provided in the current context.
+- If verification is missing, explicitly mark as unknown and avoid feature promises.
+- Preferred safe phrasing:
+  - "Verified capability: ..."
+  - "Unknown/unverified in current context: ..."
+- Never fabricate integrations, automations, or platform support claims.
+
+## Alignment checks
+- Ensure each note block supports the slide's title and bullets.
+- Preserve continuity across slides by ending with a forward transition when appropriate.

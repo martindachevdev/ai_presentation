@@ -1,0 +1,32 @@
+---
+description: Improve slide content quality and factual tool claims
+alwaysApply: true
+---
+
+# Presentation Content Quality
+
+Applies to all content edits for this presentation repository.
+
+## Slide content standards
+- Keep bullets concise and scannable, usually one core idea per bullet.
+- Prefer strong, concrete wording over vague abstractions.
+- Maintain a clear narrative progression between neighboring slides.
+- Preserve the existing bilingual style where Bulgarian and English technical terms are intentionally mixed.
+- Avoid repeating the same claim across multiple bullets unless it is intentionally reframed.
+
+## Tool capability truthfulness (very strict)
+- Never invent or assume what a tool can do.
+- Before claiming a capability, verify it from at least one reliable source in current context:
+  - official documentation,
+  - repository/project documentation,
+  - explicitly provided source text.
+- If capability is not verified, write it as unknown rather than guessing.
+- Use explicit phrasing for uncertain claims:
+  - "Unverified in current context: ..."
+  - "Unknown without official/source confirmation."
+- Do not present speculative capability statements as facts.
+
+## Writing constraints
+- Prefer actionable, audience-ready phrasing.
+- Keep claims testable and specific.
+- Remove hype language unless it serves a clear rhetorical purpose in the talk.
