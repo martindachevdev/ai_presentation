@@ -1,14 +1,12 @@
 import './SlideCard.css'
 
-export function SlideCard({ slide, variant = 'default', showLinks = true, maxLinks = 6 }) {
+export function SlideCard({ slide, variant = 'default', showLinks = true }) {
   const isTitleSlide = slide.layout === 'title'
   const hasSideVisual = Boolean(slide.image || slide.logo)
   const isStackedTitleVisual =
     isTitleSlide && slide.visualPlacement === 'top' && hasSideVisual
   const bullets = Array.isArray(slide.bullets) ? slide.bullets : []
   const hasLinks = showLinks && Array.isArray(slide.links) && slide.links.length > 0
-  const visibleLinks = hasLinks ? slide.links.slice(0, maxLinks) : []
-  const hiddenLinksCount = hasLinks ? Math.max(slide.links.length - maxLinks, 0) : 0
 
   const visualEl = slide.image ? (
     <div className="slideCard__imageWrap">
@@ -47,16 +45,13 @@ export function SlideCard({ slide, variant = 'default', showLinks = true, maxLin
         <div className="slideCard__links">
           <p className="slideCard__linksTitle">Линкове</p>
           <ul className="slideCard__linksList">
-            {visibleLinks.map((item) => (
+            {slide.links.map((item) => (
               <li key={item.url}>
                 <a href={item.url} target="_blank" rel="noreferrer">
                   {item.label}
                 </a>
               </li>
             ))}
-            {hiddenLinksCount > 0 ? (
-              <li className="slideCard__more">+ {hiddenLinksCount} още (в speaker notes)</li>
-            ) : null}
           </ul>
         </div>
       ) : null}
